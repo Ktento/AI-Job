@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>自己分析WebApp</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <h1>自己分析WebApp</h1>
+  <p>就活で使用する自己PRや志望動機を登録し、AIによる自己分析を行います。</p>
+
+  <form action="/register" method="post">
+    <div>
+      <label for="self_pr">自己PR:</label><br>
+      <textarea id="self_pr" name="self_pr" rows="4" cols="50"></textarea>
+    </div>
+    <div>
+      <label for="motivation">志望動機:</label><br>
+      <textarea id="motivation" name="motivation" rows="4" cols="50"></textarea>
+    </div>
+    <div>
+      <input type="submit" value="送信">
+    </div>
+  </form>
+</body>
+</html>
