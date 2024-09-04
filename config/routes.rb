@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  get '/', to:'top#index'
+  resources :job_hunting_infos
+  get "/", to: "top#index"
+
+  get "/login", to: "login#try"
 end

@@ -1,0 +1,37 @@
+<%= form_with(model: job_hunting_info) do |form| %>
+  <% if job_hunting_info.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(job_hunting_info.errors.count, "error") %> prohibited this job_hunting_info from being saved:</h2>
+
+      <ul>
+        <% job_hunting_info.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :self_pr, style: "display: block" %>
+    <%= form.text_field :self_pr %>
+  </div>
+
+  <div>
+    <%= form.label :motivation, style: "display: block" %>
+    <%= form.text_field :motivation %>
+  </div>
+
+  <div>
+    <%= form.label :extracurricular_activities, style: "display: block" %>
+    <%= form.text_field :extracurricular_activities %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
