@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_04_022943) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_06_042138) do
   create_table "job_hunting_infos", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.string "self_pr"
-    t.string "motivation"
-    t.string "extracurricular_activities"
+    t.string "self_pr", limit: 400
+    t.string "motivation", limit: 400
+    t.string "extracurricular_activities", limit: 400
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_job_hunting_infos_on_user_id"
@@ -23,7 +23,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_04_022943) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.string "pass"
+    t.string "email"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

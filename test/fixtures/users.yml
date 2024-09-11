@@ -2,8 +2,10 @@
 
 one:
   name: MyString
-  pass: MyString
+  email: MyString
+  password_digest: MyString
 
 two:
   name: MyString
-  pass: MyString
+  email: MyString
+  password_digest: MyString
