@@ -1,8 +1,16 @@
-<h1>ログイン</h1>
-<%= form_for(:session, url: login_path) do |f| %>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <%= f.submit "Log in" %>
+<div class="menu">
+  <h2>ログイン</h2>
+</div>
+<%= form_for(:session, url: login_path, html: { class: 'login-form' }) do |f| %>
+  <div class="form-group">
+    <%= f.label :email, class: 'form-label' %>
+    <%= f.email_field :email, class: 'form-input' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password, class: 'form-label' %>
+    <%= f.password_field :password, class: 'form-input' %>
+  </div>
+  <div class="form-group">
+    <%= f.submit "Log in", class: 'btn btn-primary' %>
+  </div>
 <% end %>
