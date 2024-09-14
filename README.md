@@ -1,5 +1,7 @@
 # README
 
+個人開発中の Rails アプリ
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
