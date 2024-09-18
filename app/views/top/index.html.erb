@@ -28,7 +28,7 @@
   <div class="content">
     <h1>自己分析WebApp</h1>
     <p>就活で使用する自己PRや志望動機を登録し、AIによる自己分析を行います。</p>
-
+    <% if logged_in? %>
     <form action="/register" method="post">
       <div>
         <label for="self_pr">自己PR:</label><br>
@@ -46,6 +46,10 @@
         <input type="submit" value="送信">
       </div>
     </form>
+    <%else%>
+    <li><a href="<%= login_path %>">ログイン</a></li>
+    <li><a href="<%= signup_path %>">アカウント作成</a></li>
+    <%end%>
   </div>
 </body>
 </html>
